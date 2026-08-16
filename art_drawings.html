@@ -74,6 +74,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -163,12 +192,18 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="section-1">2023-2024</h2>
 <p><img src="images/Drosera.JPG" class="img-fluid" style="width:60.0%"></p>
 <p><strong>Drosera capensis -</strong> 8/2023</p>
-<p>Oil on canvas board, 25x25 cm. The octagonal frame is made of plywood and painted in watercolour.</p>
+<p>Oil on canvas board, <span class="math inline">\(25 \times 25 cm\)</span>.</p>
+<p><em>The octagonal frame is made of plywood and painted in watercolour.</em></p>
+<hr>
+<p><img src="images/TheoExp.JPG" class="img-fluid" style="width:90.0%"></p>
+<p><strong>Allegory of Theoretical and Experimental Physics -</strong> 19/3/2023</p>
+<p>Black ink with mapping dip pen, highlighter ink, watercolor and water-soluble graphite pencils on A5 paper.</p>
+<p><em>I probably lost my eyes in drawing the details. The height of the cat (Lisca) on the right is approximately <span class="math inline">\(1cm\)</span>. It is the smallest Lisca I have ever drawn.</em></p>
 </section>
 <section id="section-2" class="level2">
 <h2 class="anchored" data-anchor-id="section-2">2021-2022</h2>
 <p><img src="images/selfportrait.JPG" class="img-fluid" style="width:60.0%"></p>
-<p><strong>Dragon Selfportrait -</strong> 29/7/2022</p>
+<p><strong>Dragon Self-Portrait -</strong> 29/7/2022</p>
 <p>Black ink and charcoal on A4 dark-yellow paper.</p>
 <hr>
 <p><img src="images/Cloud_cat.JPG" class="img-fluid" style="width:90.0%"></p>
@@ -181,7 +216,7 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 <p><img src="images/Research.JPG" class="img-fluid" style="width:90.0%"></p>
 <p><strong>Allegory of Research -</strong> 6/7/2021</p>
-<p>Oil on canvas, 20x30cm.</p>
+<p>Oil on canvas, <span class="math inline">\(20 \times 30 cm\)</span>.</p>
 <hr>
 <p><img src="images/Catification.jpg" class="img-fluid" style="width:60.0%"></p>
 <p><strong>Lisca as the Catification of Physics -</strong> 21/6/2021</p>
@@ -189,18 +224,11 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="section-3" class="level2">
 <h2 class="anchored" data-anchor-id="section-3">2018</h2>
-<div class="quarto-layout-panel" data-layout-ncol="2">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="images/Scutigera.jpg" class="img-fluid" width="400"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="images/Dragonfly.jpg" class="img-fluid" width="400"></p>
-</div>
-</div>
+<div style="display: flex; gap: 20px; flex-wrap: wrap;">
+<p><img src="images/Scutigera.jpg" style="width: 30%; min-width: 200px;"> <img src="images/Dragonfly.jpg" style="width: 30%; min-width: 200px;"></p>
 </div>
 <p><strong>Scutigera and Dragonfly -</strong> ??/9/2018</p>
-<p>Black ink and charcoal on paper, 8x12cm.</p>
+<p>Black ink and charcoal on paper, <span class="math inline">\(8 \times 12 cm\)</span>.</p>
 
 
 </section>
