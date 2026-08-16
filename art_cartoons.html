@@ -42,10 +42,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-92404dd89b1444827012a9e3a58cda88.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-3b3a1b88915a572f254f0096915d5cc9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -74,6 +74,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -136,8 +165,10 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#comic-strips" id="toc-comic-strips" class="nav-link active" data-scroll-target="#comic-strips">Comic Strips</a>
   <ul class="collapse">
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">2025-2026</a></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">2021-2022</a></li>
+  <li><a href="#rats-2025" id="toc-rats-2025" class="nav-link" data-scroll-target="#rats-2025">Rats (2025)</a></li>
+  <li><a href="#ants-2022" id="toc-ants-2022" class="nav-link" data-scroll-target="#ants-2022">Ants (2022)</a></li>
+  <li><a href="#cats-2021" id="toc-cats-2021" class="nav-link" data-scroll-target="#cats-2021">Cats (2021)</a></li>
+  <li><a href="#strange-creatures-2020" id="toc-strange-creatures-2020" class="nav-link" data-scroll-target="#strange-creatures-2020">Strange Creatures (2020)</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -150,22 +181,38 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="comic-strips" class="level1">
 <h1>Comic Strips</h1>
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section">2025-2026</h2>
-<p><img src="images/Pedes_Silentio_Pandit.jpg" class="img-fluid" style="width:100.0%"></p>
-<p><strong>Pedes Silentio Pandit -</strong> 21/08/2025</p>
-<p>Blue ink and water on A4 paper.</p>
-<p><em>The title is Latin and translates as “It [the spider] silently stretches its legs”.</em></p>
-</section>
-<section id="section-1" class="level2">
-<h2 class="anchored" data-anchor-id="section-1">2021-2022</h2>
-<p><img src="images/Lisca_portrait.jpg" class="img-fluid" style="width:70.0%"></p>
-<p><strong>Lisca’s Portrait -</strong> 1/06/2022</p>
-<p>Black ink and water-soluble graphite pencils on A5 paper.</p>
+<section id="rats-2025" class="level2">
+<h2 class="anchored" data-anchor-id="rats-2025">Rats (2025)</h2>
+<p><img src="images/Rats_Egypt.JPG" class="img-fluid" style="width:60.0%"></p>
+<p><em>“My lord, this young rat is the architect in charge of the new temple for the cat-goddess Bastet.”</em></p>
+<p><em>“It looks promising! …but that magnificence does that rectangle on the map represent? A pond of snakes? A pool of milk? An immense golden altar?”</em></p>
+<p><em>“It’s a gigant litter-box for the goddess!”</em></p>
 <hr>
-<p><img src="images/Catification.jpg" class="img-fluid" style="width:70.0%"></p>
-<p><strong>Lisca as the Catification of Physics -</strong> 21/06/2021</p>
-<p>Black ink, charcoal and water-soluble graphite pencils on A4 paper.</p>
+<p><img src="images/Rats_modern.JPG" class="img-fluid" style="width:60.0%"></p>
+<p><em>“The advantage of abstract paintings is that they don’t have a right side up, so you don’t risk making the mistake of hanging them upside down!”</em></p>
+</section>
+<section id="ants-2022" class="level2">
+<h2 class="anchored" data-anchor-id="ants-2022">Ants (2022)</h2>
+<p><img src="images/Ants_invention.JPG" class="img-fluid" style="width:60.0%"></p>
+<p><em>“Wait! Look: that’s my last invention!”</em></p>
+</section>
+<section id="cats-2021" class="level2">
+<h2 class="anchored" data-anchor-id="cats-2021">Cats (2021)</h2>
+<p><img src="images/Cats_grid.JPG" class="img-fluid" style="width:60.0%"></p>
+<p>[Sign on the wall:</p>
+<p>Classroom 1-5 <span class="math inline">\(\leftarrow\)</span></p>
+<p>Classroom 7-11 <span class="math inline">\(\rightarrow\)</span></p>
+<p>Classroom 6 <span class="math inline">\(\uparrow\)</span>.</p>
+<p>Classroom 6 can be seen at the end of the corridor behind the two students]</p>
+<p><em>“No: Classroom 6 isn’t even behind that grid…!</em></p>
+</section>
+<section id="strange-creatures-2020" class="level2">
+<h2 class="anchored" data-anchor-id="strange-creatures-2020">Strange Creatures (2020)</h2>
+<p><img src="images/Creatures_blackwhite.JPG" class="img-fluid" style="width:60.0%"></p>
+<p>Fossiguf: <em>“Jril is usually painting at this time… I’m going to visit her: she hasn’t spoken to me about her paintings for a few days, and that’s unusual…”</em></p>
+<p>Jril: <em>“STOP! I’m fed up!”</em> [Jril trows away a painting] <em>“I can’t stand painting white flowers, black flowers, black and white flowers anymore… ARGH! I give up!”</em></p>
+<p>Fossiguf: <em>“If that’s the problem, Jril, why don’t you try painting red, yellow or even blue flowers? What’s stopping you?”</em></p>
+<p>Jril: “…the simple fact that we’re in a black and white comic strip, Fossiguf: here colors don’t exist.”</p>
 
 
 </section>
