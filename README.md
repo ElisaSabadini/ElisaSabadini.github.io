@@ -1,3 +1,5 @@
 # Elisa Sabadini's Website
-This site is still in progress.
-I am going to collect here my research activity over the next years, as well as some artistic stuff I make in the meantime.
+I will gather here my research activity and publications over the next few years,
+together with some of the artistic work I make along the way.
+For now, the artistic part will probably be more active,
+since I am just at the beginning of my PhD.
